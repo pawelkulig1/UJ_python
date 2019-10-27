@@ -1,5 +1,6 @@
 import numpy as np
 from collections import defaultdict
+
 def moda_py(L):#, left, right): - nie widze sensu
     dictionary = defaultdict(int)
     max_count = 0

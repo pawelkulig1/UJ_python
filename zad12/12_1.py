@@ -1,25 +1,17 @@
 import random
 def create_list(N, k):
-    L = []
-    for i in range(N):
-        L.append(random.randint(0, k-1))
-
-    return L
+    return [random.randint(0, k-1) for i in range(N)]
 
 def find_occurences(L, k):
-    positions = []
-    for i, el in enumerate(L):
-        if el == k:
-            positions.append(i)
-
-    return positions
+    return [i for i, e in enumerate(L) if e == k]
 
 k = 10
 N = 20
-val_to_find = 3
+val_to_find = random.randint(0, k-1)
+print("value to fing: ", val_to_find)
 L = create_list(N, k)
-print(L)
-print(find_occurences(L, val_to_find))
+print("Full list: ", L)
+print("Found on positions: ", find_occurences(L, val_to_find))
 
         
 
